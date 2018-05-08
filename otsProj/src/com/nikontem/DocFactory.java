@@ -15,6 +15,11 @@ public class DocFactory {
             parser.parseFile();
         }
 
+        if(type.equals("txt")){
+            parser = new ParseDataTxt(path);
+            parser.parseFile();
+        }
+
 
         return parser;
 

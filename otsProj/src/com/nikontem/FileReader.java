@@ -6,10 +6,11 @@ import java.util.Scanner;
 public class FileReader {
 
     private String configFile = ""; //This can only be txt
-    private String toEncrypt = ""; //This can't be txt
-    private String outputFile = ""; // txt or same as "toEncrypt" data file ?
+    private String dataFile = ""; //This can't be txt
+    private String encryptedFile = ""; // txt or same as "toEncrypt" data file ?
     private String fileType;
     private List<String> encyptFields;
+    private List<String> dataFields;
     private TypeCheck typeChecker = new TypeCheck();
     private DocFactory docker = new DocFactory();
     private ParseDoc docparser;
@@ -33,7 +34,7 @@ public class FileReader {
         }
     }
 
-    public List<String> specifyConfig() {
+    public List<String> specifyConfigFile() {
 
 
         System.out.println("Specify the config file");
@@ -50,11 +51,21 @@ public class FileReader {
     }
 
 
-//            if (toEncrypt.isEmpty()){
-//                System.out.println("Specify input file");
-//                toEncrypt = scanner.nextLine();
-//                fileType = typeChecker.getFileExtension(toEncrypt);
-//            }
+    public List<String> specifyDataFile(){
+        System.out.println("Specify the data file");
+        dataFile = scanner.nextLine();
+
+        while (noFileName(dataFile)){
+            System.out.println("You didn't specify a file name");
+            dataFile = scanner.nextLine();
+        }
+        fileType=typeChecker.getFileExtension(dataFile);
+        docparser = docker.readDocument(fileType,dataFile);
+
+
+
+        return dataFields;
+    }
 //
 //            if (outputFile.isEmpty()){
 //                System.out.println("Specify the output file");
@@ -63,17 +74,7 @@ public class FileReader {
 //            }
 
 
-    public String geConfigFile() {
-        return configFile;
-    }
 
-    public String getToEncrypt() {
-        return toEncrypt;
-    }
-
-    public String getOutputFile() {
-        return outputFile;
-    }
 }
 
 

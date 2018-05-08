@@ -2,29 +2,25 @@ package com.nikontem;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-public class ParseConfig extends ParseDoc {
-    public ParseConfig(String path) {
-        super(path);
-    }
-
+public class ParseDataTxt extends ParseDoc {
     private String filePath = getPath();
-    private File configFile = new File(filePath);
+    private File dataFile = new File(filePath);
     private List<String> fields = new ArrayList<String>();
 
-
-
+    public ParseDataTxt(String path) {
+        super(path);
+    }
 
     @Override
     public void parseFile() {
 
-        emptyFile(configFile);
+        emptyFile(dataFile);
 
-        try (Scanner newScan = new Scanner(configFile)) {
+        try (Scanner newScan = new Scanner(dataFile).useDelimiter("\t")) {
             while(newScan.hasNext()){
                 fields.add(newScan.next());
             }
@@ -33,13 +29,12 @@ public class ParseConfig extends ParseDoc {
             e.printStackTrace();
         }
 
+        System.out.println(fields.get(4));
 
     }
 
     @Override
-    public List<String> getFields() {
-        return fields;
+    List<String> getFields() {
+        return null;
     }
-
 }
-
