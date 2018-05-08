@@ -1,9 +1,10 @@
 package com.nikontem;
+
 import java.util.List;
-import java.io.File;
+
 
 public abstract class ParseDoc {
-    private List<String> fields;
+
     private String path;
 
 
@@ -11,11 +12,9 @@ public abstract class ParseDoc {
         this.path = path;
     }
 
-    public abstract void parseFile();
+    abstract void parseFile();
 
-    public List<String> getFields() {
-        return fields;
-    }
+    abstract List<String> getFields();
 
     public String getPath() {
         return path;

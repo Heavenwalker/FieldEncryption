@@ -1,10 +1,10 @@
 package com.nikontem;
 
+
 public class Main {
 
     public static void main(String[] args) {
-	FileReader fr = new FileReader();
-	fr.fileScanner();
-
+        FileReader fileReader = new FileReader();
+        fileReader.specifyConfig();
     }
 }
