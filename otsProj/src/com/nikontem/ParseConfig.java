@@ -2,6 +2,7 @@ package com.nikontem;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import java.util.ArrayList;
@@ -14,8 +15,8 @@ public class ParseConfig extends ParseDoc {
 
     private String filePath = getPath();
     private File configFile = new File(filePath);
-    private List<String> fields = new ArrayList<String>();
-
+    private List<String[]> fields = new ArrayList<String[]>();
+    private StringBuilder tempFields = new StringBuilder();
 
 
 
@@ -25,19 +26,27 @@ public class ParseConfig extends ParseDoc {
         emptyFile(configFile);
 
         try (Scanner newScan = new Scanner(configFile)) {
-            while(newScan.hasNext()){
-                fields.add(newScan.next());
+
+            while(newScan.hasNextLine()){
+               tempFields.append(newScan.next() + "\t");
+
             }
-            newScan.close();
+            fields.add(tempFields.toString().split("\\t"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
 
+
+
+//        for (String[] conf : fields){
+//            System.out.println(Arrays.toString(conf));
+//        }
+
     }
 
     @Override
-    public List<String> getFields() {
+    public List< String[] > getFields() {
         return fields;
     }
 

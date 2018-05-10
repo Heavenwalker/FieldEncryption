@@ -14,17 +14,17 @@ public class AESEncryption extends Encryptor {
 
     @Override
     public String Encryptor() {
-        try {
-            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
-
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
-            cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
-
-            byte[] encrypted = cipher.doFinal();
-        }catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
+    //        try {
+    //        SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+    //
+    //        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+    //        cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
+    //
+    //        byte[] encrypted = cipher.doFinal();
+    //    }catch (Exception ex) {
+    //        ex.printStackTrace();
+    //    }
+        return null;
     }
 
     @Override

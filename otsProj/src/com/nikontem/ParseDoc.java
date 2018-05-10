@@ -30,7 +30,7 @@ public abstract class ParseDoc {
     }
     abstract void parseFile();
 
-    abstract List<String> getFields();
+    abstract List<String []> getFields();
 
     public String getPath() {
         return path;

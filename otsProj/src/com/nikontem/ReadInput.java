@@ -3,14 +3,14 @@ package com.nikontem;
 import java.util.List;
 import java.util.Scanner;
 
-public class FileReader {
+public class ReadInput {
 
     private String configFile = ""; //This can only be txt
     private String dataFile = ""; //This can't be txt
     private String encryptedFile = ""; // txt or same as "toEncrypt" data file ?
     private String fileType;
-    private List<String> encyptFields;
-    private List<String> dataFields;
+    private List<String[]> encyptFields;
+    private List<String[]> dataFields;
     private TypeCheck typeChecker = new TypeCheck();
     private DocFactory docker = new DocFactory();
     private ParseDoc docparser;
@@ -34,7 +34,7 @@ public class FileReader {
         }
     }
 
-    public List<String> specifyConfigFile() {
+    public List<String []> specifyConfigFile() {
 
 
         System.out.println("Specify the config file");
@@ -51,7 +51,7 @@ public class FileReader {
     }
 
 
-    public List<String> specifyDataFile(){
+    public List<String[]> specifyDataFile(){
         System.out.println("Specify the data file");
         dataFile = scanner.nextLine();
 
@@ -62,7 +62,7 @@ public class FileReader {
         fileType=typeChecker.getFileExtension(dataFile);
         docparser = docker.readDocument(fileType,dataFile);
 
-
+        dataFields = docparser.getFields();
 
         return dataFields;
     }

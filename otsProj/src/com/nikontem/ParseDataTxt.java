@@ -2,16 +2,14 @@ package com.nikontem;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class ParseDataTxt extends ParseDoc {
     private String filePath = getPath();
     private File dataFile = new File(filePath);
-    private List<String> fields = new ArrayList<String>();
+    private List<String []> fields = new ArrayList<String []>();
 
+    private HashMap dict = new HashMap<String, ArrayList<String>>();
 
     public ParseDataTxt(String path) {
         super(path);
@@ -22,10 +20,10 @@ public class ParseDataTxt extends ParseDoc {
 
         emptyFile(dataFile);
 
-        try (Scanner newScan = new Scanner(dataFile)) {
-            String nextLine;
+        try (Scanner newScan = new Scanner(dataFile).useDelimiter("\\t|\\n")) {
+            String[] nextLine;
             while (newScan.hasNext()) {
-                nextLine = newScan.nextLine();
+                nextLine = newScan.nextLine().split("\\t");
                 fields.add(nextLine);
                 // System.out.println("findDelimiter is " + findDelimiter + " at " + fields.size());
             }
@@ -33,6 +31,17 @@ public class ParseDataTxt extends ParseDoc {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+//        String[] col;
+//        for(String[] fild : fields) {
+////            System.out.println(Arrays.toString(fild));
+//
+//
+//        }
+//
+//        col = fields.get(0)[0].split("\n");
+//
+
 
         /* THIS SHOULD BE USED IN THE ENCRYPTING CLASS*/
 
@@ -61,7 +70,7 @@ public class ParseDataTxt extends ParseDoc {
     }
 
     @Override
-    public List<String> getFields() {
+    public List<String[]> getFields() {
         return fields;
     }
 }
