@@ -8,6 +8,7 @@ public class ReadInput {
     private String configFile = ""; //This can only be txt
     private String dataFile = ""; //This can't be txt
     private String encryptedFile = ""; // txt or same as "toEncrypt" data file ?
+    private String encryptionMethod = "";
     private String fileType;
     private List<String[]> encyptFields;
     private List<String[]> dataFields;
@@ -65,6 +66,23 @@ public class ReadInput {
         dataFields = docparser.getFields();
 
         return dataFields;
+    }
+
+    public String encryptionType(){
+
+        while(encryptionMethod.equals("")){
+            System.out.println("Select encryption method");
+            System.out.println("Press 1 for AES");
+            int selection = scanner.nextInt();
+            switch(selection){
+                case 1 :encryptionMethod = "AES";
+                break;
+                default: encryptionMethod = "";
+                break;
+            }
+
+        }
+        return encryptionMethod;
     }
 //
 //            if (outputFile.isEmpty()){

@@ -34,13 +34,13 @@ public class ParseDataTxt extends ParseDoc {
 
 //        String[] col;
 //        for(String[] fild : fields) {
-////            System.out.println(Arrays.toString(fild));
+//            System.out.println(fild[0]);
 //
 //
 //        }
-//
+
 //        col = fields.get(0)[0].split("\n");
-//
+
 
 
         /* THIS SHOULD BE USED IN THE ENCRYPTING CLASS*/

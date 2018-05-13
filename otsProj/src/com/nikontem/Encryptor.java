@@ -1,27 +1,24 @@
 package com.nikontem;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Encryptor {
-    List<String> configFields;
-    List<String> dataFields;
 
-    public Encryptor(List<String> configFields, List<String> dataFields) {
-        this.configFields = configFields;
-        this.dataFields = dataFields;
+    Map<String, ArrayList> crossedFields = new HashMap<>();
+
+
+
+    public Encryptor(Map<String, ArrayList> crossedFields) {
+        this.crossedFields = crossedFields;
     }
 
+    abstract void Encrypt();
+    abstract List<String []> getMap();
 
-
-    public abstract  String Encryptor();
-
-    public abstract String getCipher();
-
-    public List<String> getDataFields() {
-        return dataFields;
-    }
-
-    public List<String> getConfigFields() {
-        return configFields;
+    public Map<String, ArrayList> getCrossedFields() {
+        return crossedFields;
     }
 }

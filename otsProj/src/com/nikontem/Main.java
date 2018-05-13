@@ -6,26 +6,23 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        List<String[]> configFields = new ArrayList<String[]>();
-        List<String[]> dataFields = new ArrayList<String[]>();
+        List<String[]> configFields = new ArrayList<>();
+        List<String[]> dataFields = new ArrayList<>();
+        String encryptMethod;
+        Map<String, ArrayList> crossedFields = new HashMap<>();
         ReadInput readInput = new ReadInput();
-        List<String> set = new ArrayList<>();
+        CrossFields crossFields;
 
 
         configFields = readInput.specifyConfigFile();
         dataFields = readInput.specifyDataFile();
+        encryptMethod=readInput.encryptionType();
+        readInput.encryptionType();
+        crossFields = new CrossFields(configFields,dataFields);
+        crossedFields = crossFields.getCrossedFields();
 
-        for (String e : configFields.get(0)){
-            System.out.println(e);
 
-            for (int i =0; i<dataFields.get(0).length; i++) {
-                if (dataFields.get(0)[i].equals(e)) {
-
-                    set.add(e);
-                }
-            }
-        }
-        System.out.println(set);
+        System.out.println(Arrays.asList(crossedFields));
 
     }
 }
