@@ -10,7 +10,7 @@ public class DocFactory {
         ParseDoc parser =null;
 
         if (type.equals("config")){
-            List<String> fields = new ArrayList<String>();
+
             parser = new ParseConfig(path);
             parser.parseFile();
         }

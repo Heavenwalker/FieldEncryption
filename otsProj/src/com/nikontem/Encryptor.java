@@ -15,8 +15,8 @@ public abstract class Encryptor {
         this.crossedFields = crossedFields;
     }
 
-    abstract void Encrypt();
-    abstract List<String []> getMap();
+    abstract Map<String, ArrayList> Encrypt();
+    abstract Map<String, ArrayList> getMap();
 
     public Map<String, ArrayList> getCrossedFields() {
         return crossedFields;

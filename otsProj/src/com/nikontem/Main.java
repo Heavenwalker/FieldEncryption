@@ -12,17 +12,29 @@ public class Main {
         Map<String, ArrayList> crossedFields = new HashMap<>();
         ReadInput readInput = new ReadInput();
         CrossFields crossFields;
-
+        EncryptionFactory encryptionFactory ;
+        AnonymizeData anonymizeData;
 
         configFields = readInput.specifyConfigFile();
         dataFields = readInput.specifyDataFile();
         encryptMethod=readInput.encryptionType();
-        readInput.encryptionType();
         crossFields = new CrossFields(configFields,dataFields);
-        crossedFields = crossFields.getCrossedFields();
+        crossFields.getCrossedFields();
 
+        encryptionFactory = new EncryptionFactory(encryptMethod,crossedFields);
+        crossedFields = encryptionFactory.EncryptMethod().getMap();
+        anonymizeData = new AnonymizeData(crossedFields,dataFields);
+        anonymizeData.mergeData();
 
-        System.out.println(Arrays.asList(crossedFields));
+        /*To do
+        Merge anonymized data with initial dataField.
+
+        Writer class (output file(call to TypeCheck),crossedFields)
+
+         */
+
+        //System.out.println(Arrays.asList(crossedFields));
+
 
     }
 }
