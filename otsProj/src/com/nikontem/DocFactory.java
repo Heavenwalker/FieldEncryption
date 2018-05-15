@@ -24,4 +24,15 @@ public class DocFactory {
         return parser;
 
     }
+
+    public  FileWriter writeToFile(String type, String path, List<String[]> anonymizedData){
+        FileWriter fileWriter = null;
+
+        if (type.equals("txt")){
+            fileWriter = new TxtWriter(path,anonymizedData);
+
+        }
+
+        return fileWriter;
+    }
 }

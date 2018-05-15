@@ -4,41 +4,64 @@ import java.util.*;
 
 public class AnonymizeData {
 
-    Map<String, ArrayList> encryptedData = new HashMap<>();
-    List<String[]> cypherFields = new ArrayList<>();
+    private Map<String, ArrayList> encryptedData = new HashMap<>();
+    private List<String[]> cypherFields = new ArrayList<>();
+    private List<String> index = new ArrayList<>();
+    private int j;
 
     public AnonymizeData(Map<String, ArrayList> encryptedData, List<String[]> cypherFields) {
         this.encryptedData = encryptedData;
         this.cypherFields = cypherFields;
     }
 
-   public void mergeData() {
+    private List<String[]> mergeData() {
 
         for (Map.Entry<String, ArrayList> entry : encryptedData.entrySet()) {
-            for (int i = 0; i< cypherFields.get(0).length; i++){
-                if(cypherFields.get(0)[i].equals(entry.getKey())){
-                    //System.out.println(cypherFields.get(0)[i]);
-                    for (String[] fields: cypherFields){
-                        for (int j = 0; j<entry.getValue().size(); j++){
-                            if (cypherFields.get(0)[i].equals(fields[i])){}
-                            else {
+            for (int i = 0; i < cypherFields.get(0).length; i++) {
+                if (cypherFields.get(0)[i].equals(entry.getKey())) {
+                    index.add(Integer.toString(i));
+                }
+            }
+        }
 
-                                fields[i] = entry.getValue().get(j).toString();
-                               // System.out.println(Arrays.toString(fields));
-                                break;
-                            }
+        for (int i = 0; i < index.size(); i++) {
+            for (Map.Entry<String, ArrayList> entry : encryptedData.entrySet()) {
+                if (cypherFields.get(0)[Integer.parseInt(index.get(i))].equals(entry.getKey())) {
+                    for (String[] e : cypherFields) {
+                        if (e[Integer.parseInt(index.get(i))].equals(entry.getKey())) {
+
+                            j = 0;
+
+                        } else {
+
+                            e[Integer.parseInt(index.get(i))] = entry.getValue().get(j).toString();
+                            j++;
+
                         }
-
                     }
                 }
             }
         }
 
 
-
+        return cypherFields;
     }
 
-    public Map<String, ArrayList> getEncryptedData() {
-        return encryptedData;
+
+    public List<String[]> getCypherFields() {
+        return mergeData();
     }
 }
+
+
+//                    for (String[] fields: cypherFields){
+//                        for (int j = 0; j<entry.getValue().size(); j++){
+//                            if (cypherFields.get(0)[i].equals(fields[i])){}
+//                            else {
+//
+//                                fields[i] = entry.getValue().get(j).toString();
+//                                System.out.println(Arrays.toString(fields));
+//                            }
+//                        }
+//
+//                    }

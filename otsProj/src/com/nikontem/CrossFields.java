@@ -6,7 +6,7 @@ public class CrossFields {
 
     private List<String []> configFields;
     private List<String []> dataFields;
-    private Map<String, List<String>>crossedFields = new HashMap<>();
+    private Map<String, ArrayList>crossedFields = new HashMap<>();
 
     public CrossFields(List<String[]> configFields, List<String[]> dataFields) {
         this.configFields = configFields;
@@ -21,14 +21,13 @@ public class CrossFields {
 //    crossedFields= new CrossFields(configFields,dataFields);
 
 
-    private Map<String, List<String>> CrossOver(){
+    private Map<String, ArrayList> CrossOver(){
         List<String> crossindex = new ArrayList<>();
 
         for(String e : configFields.get(0)){
             for (int i = 0; i< dataFields.get(0).length; i++){
                 if(dataFields.get(0)[i].equals(e)){
                     crossindex.add(Integer.toString(i));
-
                 }
             }
         }
@@ -47,12 +46,12 @@ public class CrossFields {
             crossedFields.put(dataFields.get(0)[Integer.parseInt(crossindex.get(i))],tempArray);
         }
 
-        System.out.println(Arrays.asList(crossedFields));
+
 
         return crossedFields;
     }
 
-    public Map<String, List<String>> getCrossedFields() {
+    public Map<String,ArrayList> getCrossedFields() {
         return CrossOver();
     }
 

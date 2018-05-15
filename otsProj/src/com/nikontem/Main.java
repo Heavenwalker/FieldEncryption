@@ -14,17 +14,23 @@ public class Main {
         CrossFields crossFields;
         EncryptionFactory encryptionFactory ;
         AnonymizeData anonymizeData;
+        Encryptor encryptor;
 
         configFields = readInput.specifyConfigFile();
         dataFields = readInput.specifyDataFile();
         encryptMethod=readInput.encryptionType();
         crossFields = new CrossFields(configFields,dataFields);
-        crossFields.getCrossedFields();
+        crossedFields = crossFields.getCrossedFields();
 
         encryptionFactory = new EncryptionFactory(encryptMethod,crossedFields);
-        crossedFields = encryptionFactory.EncryptMethod().getMap();
+        encryptor = encryptionFactory.EncryptMethod();
+        crossedFields=encryptor.getMap();
         anonymizeData = new AnonymizeData(crossedFields,dataFields);
-        anonymizeData.mergeData();
+
+        for (String [] e : anonymizeData.getCypherFields()){
+            System.out.println(Arrays.toString(e));
+        }
+
 
         /*To do
         Merge anonymized data with initial dataField.

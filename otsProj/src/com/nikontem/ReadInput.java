@@ -7,6 +7,7 @@ public class ReadInput {
 
     private String configFile = ""; //This can only be txt
     private String dataFile = ""; //This can't be txt
+    private String outputFile= "";
     private String encryptedFile = ""; // txt or same as "toEncrypt" data file ?
     private String encryptionMethod = "";
     private String fileType;
@@ -17,14 +18,9 @@ public class ReadInput {
     private ParseDoc docparser;
     Scanner scanner = new Scanner(System.in);
 
-    public void specifyData() {
-
-    }
 
 
-    public void specifyOutput() {
 
-    }
 
 
     public boolean noFileName(String fileName) {
@@ -34,6 +30,15 @@ public class ReadInput {
             return false;
         }
     }
+
+    public void specifyOutput(List<String[]> cypherFields) {
+        System.out.println("Specify output file");
+        outputFile = scanner.nextLine();
+        fileType = typeChecker.getFileExtension(outputFile);
+        docparser = docker.writeToFile(fileType,outputFile,cypherFields);
+
+    }
+
 
     public List<String []> specifyConfigFile() {
 
