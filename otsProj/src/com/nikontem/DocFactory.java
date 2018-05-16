@@ -2,6 +2,8 @@ package com.nikontem;
 
 //Call the appropriate parser class based on the file's extension
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,14 +27,18 @@ public class DocFactory {
 
     }
 
-    public  FileWriter writeToFile(String type, String path, List<String[]> anonymizedData){
-        FileWriter fileWriter = null;
+    public void writeToFile(String type, String path, List<String[]> anonymizedData) throws IOException {
+        Printer printer = null;
 
         if (type.equals("txt")){
-            fileWriter = new TxtWriter(path,anonymizedData);
 
+            printer = new TxtWriter(path,anonymizedData);
+            try {
+                printer.writeToFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
-        return fileWriter;
     }
 }

@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7403fc98-3e53-46a2-8ae2-7bf985881b70" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/nikontem/Printer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nikontem/TxtWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/AESEncryption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/AESEncryption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/AnonymizeData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/AnonymizeData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/CrossFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/CrossFields.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/EncryptionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/EncryptionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/Encryptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/Encryptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nikontem/AESEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/AESEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nikontem/AnonymizeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/AnonymizeData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nikontem/CrossFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/CrossFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/otsProj/com/nikontem/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nikontem/DocFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/DocFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nikontem/EncryptionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/EncryptionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nikontem/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/Encryptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nikontem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nikontem/ReadInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/ReadInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nikontem/TxtWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/TxtWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nikontem/TypeCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nikontem/TypeCheck.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,17 +22,20 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nikontem/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="315">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReadInput.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReadInput.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nikontem/ReadInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="37" column="73" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
+            <state relative-caret-position="230">
+              <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -51,24 +43,23 @@
       <file leaf-file-name="Printer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nikontem/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="306">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#387#388#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParseDoc.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nikontem/ParseDoc.java">
+      <file leaf-file-name="TxtWriter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/nikontem/TxtWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="28" column="9" selection-start-line="17" selection-start-column="4" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="323">
+              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,40 +67,11 @@
       <file leaf-file-name="DocFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nikontem/DocFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnonymizeData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nikontem/AnonymizeData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TxtWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nikontem/TxtWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+            <state relative-caret-position="340">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#155#156#0" expanded="true" />
-                <element signature="e#196#197#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nikontem/ParseConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -132,7 +94,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/nikontem/TsvParser.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/ParseTsv.java" />
-        <option value="$PROJECT_DIR$/src/com/nikontem/TypeCheck.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/ISpecifyFileName.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/EncryptionMethod.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/FileReader.java" />
@@ -142,15 +103,16 @@
         <option value="$PROJECT_DIR$/src/com/nikontem/EncryptionFactory.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/Encryptor.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/CrossFields.java" />
-        <option value="$PROJECT_DIR$/src/com/nikontem/Main.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/AESEncryption.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/AnonymizeData.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/WriterFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/nikontem/DocFactory.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/FileWriter.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/Printer.java" />
-        <option value="$PROJECT_DIR$/src/com/nikontem/TxtWriter.java" />
         <option value="$PROJECT_DIR$/src/com/nikontem/ReadInput.java" />
+        <option value="$PROJECT_DIR$/src/com/nikontem/TypeCheck.java" />
+        <option value="$PROJECT_DIR$/src/com/nikontem/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/nikontem/DocFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/nikontem/TxtWriter.java" />
       </list>
     </option>
   </component>
@@ -175,7 +137,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,8 +160,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,11 +226,12 @@
       <workItem from="1526251370346" duration="3462000" />
       <workItem from="1526290435934" duration="13145000" />
       <workItem from="1526371020831" duration="18353000" />
+      <workItem from="1526448701248" duration="3751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143557000" />
+    <option name="totallyTimeSpent" value="147308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -283,11 +246,11 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49341142" weight="0.25261584" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49341142" visible="true" weight="0.25261584" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14860907" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14787701" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -333,11 +296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" />
-            <element signature="e#189#190#0" />
-            <element signature="e#221#222#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -367,11 +325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" />
-            <element signature="e#189#190#0" />
-            <element signature="e#221#222#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -401,11 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="imports" />
-            <element signature="e#189#190#0" />
-            <element signature="e#221#222#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,11 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="imports" />
-            <element signature="e#189#190#0" />
-            <element signature="e#221#222#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -469,11 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="imports" />
-            <element signature="e#189#190#0" />
-            <element signature="e#221#222#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -495,11 +433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" />
-            <element signature="e#189#190#0" />
-            <element signature="e#221#222#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -542,13 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nikontem/TypeCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nikontem/ParseDataTxt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-245">
@@ -584,13 +510,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nikontem/WriterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nikontem/WriterFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/com/nikontem/ParseConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -598,64 +518,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nikontem/DocFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/nikontem/AnonymizeData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+        <state relative-caret-position="17">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nikontem/TypeCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nikontem/ReadInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nikontem/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nikontem/ParseDoc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="197">
           <caret line="28" column="9" selection-start-line="17" selection-start-column="4" selection-end-line="28" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nikontem/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="306">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nikontem/DocFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nikontem/TxtWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        <state relative-caret-position="323">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#155#156#0" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nikontem/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nikontem/AnonymizeData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nikontem/ReadInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="37" column="73" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
         </state>
       </provider>
     </entry>

@@ -15,9 +15,9 @@ public class TypeCheck {
 
 
 
-        if (!fileName.exists() || fileName.isDirectory()){
-                System.out.println("File does not exist");
-        }
+//        if (!fileName.exists() || fileName.isDirectory()){
+//                System.out.println("File does not exist");
+//        }
 
         if (fullName != null && !fullName.isEmpty()){
             int dotIndex = fullName.lastIndexOf('.');

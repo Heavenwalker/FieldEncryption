@@ -1,11 +1,12 @@
 package com.nikontem;
 
 
+import java.io.IOException;
 import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<String[]> configFields = new ArrayList<>();
         List<String[]> dataFields = new ArrayList<>();
         String encryptMethod;
@@ -26,10 +27,13 @@ public class Main {
         encryptor = encryptionFactory.EncryptMethod();
         crossedFields=encryptor.getMap();
         anonymizeData = new AnonymizeData(crossedFields,dataFields);
-
-        for (String [] e : anonymizeData.getCypherFields()){
-            System.out.println(Arrays.toString(e));
+        dataFields = anonymizeData.getCypherFields();
+        try {
+            readInput.specifyOutput(dataFields);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
 
 
         /*To do

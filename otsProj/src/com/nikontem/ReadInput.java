@@ -1,5 +1,6 @@
 package com.nikontem;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class ReadInput {
     private List<String[]> dataFields;
     private TypeCheck typeChecker = new TypeCheck();
     private DocFactory docker = new DocFactory();
+    private Printer printer;
     private ParseDoc docparser;
     Scanner scanner = new Scanner(System.in);
 
@@ -31,11 +33,11 @@ public class ReadInput {
         }
     }
 
-    public void specifyOutput(List<String[]> cypherFields) {
+    public void specifyOutput(List<String[]> cypherFields) throws IOException {
         System.out.println("Specify output file");
         outputFile = scanner.nextLine();
         fileType = typeChecker.getFileExtension(outputFile);
-        docparser = docker.writeToFile(fileType,outputFile,cypherFields);
+        docker.writeToFile(fileType,outputFile,cypherFields);
 
     }
 
@@ -78,7 +80,8 @@ public class ReadInput {
         while(encryptionMethod.equals("")){
             System.out.println("Select encryption method");
             System.out.println("Press 1 for AES");
-            int selection = scanner.nextInt();
+            int selection = Integer.parseInt(scanner.nextLine());
+
             switch(selection){
                 case 1 :encryptionMethod = "AES";
                 break;

@@ -1,5 +1,6 @@
 package com.nikontem;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -13,9 +14,20 @@ public class TxtWriter extends Printer {
 
     @Override
     void writeToFile() throws IOException {
-        writer = new FileWriter(this.getPath());
+        BufferedWriter bw = new BufferedWriter(new FileWriter(this.getPath()));
+
         for(String[] str: getCypherFields()) {
-            writer.write(Arrays.toString(str));
+
+            for(String s : str) {
+
+                    System.out.println(s);
+                    bw.write(s + "\t");
+
+
+            }
+
+            bw.newLine();
         }
+        bw.close();
     }
 }
